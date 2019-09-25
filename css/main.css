@@ -1,0 +1,336 @@
+/* App-wide styles
+   ========================================================================== */
+
+@font-face {
+  /* Text */
+  font-family: 'MaisonNeue-Mono';
+  src: url('../fonts/MaisonNeue-Mono.otf');
+}
+
+* {
+  /* Display & Box Model */
+  box-sizing: border-box;
+}
+
+.primary-branding {
+  /* Background & Color */
+  background-color: #22252f;
+  color: #fff;
+
+  /* Text */
+  font-family: HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.fullscreen {
+  /* Display & Box Model */
+  height: 100vh;
+  width: 100vw;
+  padding: 50px;
+
+  /* Background & Color */
+  background-color: rgba(34, 37, 47, 0.9);
+  background-size: cover;
+  background-position: center;
+
+  /* Positioning */
+  position: absolute;
+  top: 0;
+}
+
+/* Main screen & booking modal styles
+   ========================================================================== */
+
+.book-button {
+  /* Display & Box Model */
+  padding: 25px 0px;
+  width: 100%;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+
+  /* Background & Color */
+  background-color: #fff;
+  color: #22252f;
+  box-shadow: 0px 0px 100px #444;
+
+  /* Text */
+  font-weight: 900;
+  font-size: 30px;
+  letter-spacing: 12px;
+}
+
+.book-button:active {
+  /* Background & Color */
+  background-color: #22252f;
+  color: #fff;
+}
+
+.confirm {
+  /* Background & Color */
+  background-color: #5367E2;
+  color: #fff;
+  box-shadow: 0px 0px 100px #222;
+}
+
+.confirm:active {
+  /* Background & Color */
+  background-color: #fff;
+  color: #5367E2;
+}
+
+.info-section {
+  /* Display & Box Model */
+  height: 220px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  /* Positioning */
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  right: 50px;
+}
+
+.info {
+  /* Display & Box Model */
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 10;
+
+  /* Text */
+  font-size: 30px;
+}
+
+.info-header {
+  /* Text */
+  font-family: 'MaisonNeue-Mono';
+  font-weight: normal;
+  font-size: 23px;
+
+  /* Display & Box Model */
+  margin: 12px 0;
+}
+
+.meeting-time {
+  /* Display & Box Model */
+  margin-right: 30px;
+}
+
+.meeting {
+  /* Display & Box Model */
+  overflow: hidden;
+  margin: 0;
+
+  /* Text */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.header-section {
+  /* Positioning */
+  position: absolute;
+}
+
+.room-name {
+  font-size: 100px;
+  margin: 0;
+}
+
+.booked-or-not {
+  font-family: 'MaisonNeue-Mono';
+  font-size: 45px;
+  letter-spacing: 2px;
+  display: inline-block;
+
+  background-color: #D38EAA;
+  margin: 10px;
+  border-radius: 5%;
+  padding: 10px 25px 10px 25px;
+}
+
+/* Booking modal styles
+   ========================================================================== */
+
+.booking-section {
+  /* Display & Box Model */
+  height: 475px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  /* Not For Production */
+  /* background-color: red; */
+}
+
+.close {
+  /* Display & Box Model */
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+
+  /* Positioning */
+  position: relative;
+  bottom: 22.5px;
+
+  /* Text */
+  font-size: 60px;
+  text-align: right;
+
+  /* Background & Color */
+  color: #fff;
+  background-color: transparent;
+}
+
+.book-message {
+  /* Positioning */
+  position: relative;
+  top: 60px;
+
+  /* Text */
+  font-size: 47px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.duration {
+  /* Display & Box Model */
+  display: flex;
+  justify-content: space-between;
+
+  /* Positioning */
+  position: relative;
+  top: 90px;
+
+  /* Text */
+  font-size: 100px;
+  font-family: 'MaisonNeue-Mono';
+  font-weight: bold;
+}
+
+.time-picker {
+  /* Text */
+  font-size: 80px;
+  font-family: 'MaisonNeue-Mono';
+
+  /* Display & Box Model */
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  /* Background & Color */
+  color: #fff;
+}
+
+.minutes-message {
+  /* Text */
+  text-align: center;
+  font-family: 'MaisonNeue-Mono';
+  font-size: 35px;
+
+  /* Positioning */
+  position: relative;
+  top: 0px;
+}
+
+/* Admin modal styles
+   ========================================================================== */
+.admin {
+  /* Display & Box Model */
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.authorize-button {
+  /* Display & Box Model */
+  border: none;
+  outline: none;
+  display: block;
+  
+  /* Text */
+  font-size: 40px;
+
+  /* Background & Color */
+  background-color: transparent;
+}
+
+.room-select-menu {
+  outline: none;
+}
+
+.room-select-title {
+  margin-top: 50px;
+  font-size: 30px;
+}
+
+/* Confirm modal styles
+   ========================================================================== */
+
+.invisible {
+  /* Display & Box Model */
+  visibility: hidden;
+}
+
+.forefront {
+  z-index: 11;
+}
+
+.confirm-wrapper {
+  /* Display & Box Model */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  /* Positioning */
+  position: relative;
+  top: 150px;
+}
+
+.confirm-icon {
+  /* Display & Box Model */
+  height: 250px;
+  width: 250px;
+  border-radius: 200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Text */
+  font-size: 150px;
+
+  /* Background & Color */
+  background-color: #5367E2;
+  box-shadow: 0px 0px 100px #222;
+}
+
+/* Toggled styles
+   ========================================================================== */
+
+.availability {
+  z-index: 11;
+}
+
+/* Toggled styles
+   ========================================================================== */
+
+.available-4 {
+  /* Background & Color */
+  background-image: url('./images/Los_Pollos_Hermanos.png');
+}
+
+.booked-4 {
+  /* Background & Color */
+  background-image: url('./images/Los_Pollos_Hermanos_Booked.png');
+}
+
+.hidden {
+  /* Display & Box Model */
+  display: none;
+}

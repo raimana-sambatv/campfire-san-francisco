@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Shout out to Tim Hamner, David Douglas, Chelsea Stewart, Ivy Hsu, and Julien Dao Duc.
+    I owe my future life as a software engineer to you all for giving me a chance to build my
+    first professional app. May it forever make the Samba fam's work hours a little bit better.
+    - Raimana Herrmann -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campfire</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="icon" href="./images/favicon.png">
+</head>
+
+<body class="primary-branding">
+  <main class="fullscreen main" id="main-screen">
+    <div class="header-section">
+      <div>
+        <h1 class="room-name" id="room-name"></h1>
+      </div>
+      <div class="booked-or-not hidden" id="booked-or-not">BOOKED</div>
+    </div>
+    <div class="info-section">
+      <button class="book-button hidden" id="booking-button">BOOK</button>
+      <div class="info" id="current-status">
+        <h3 class="info-header">NOW:</h3>
+        <p class="meeting"><strong class="meeting-time" id="current-meeting-time"></strong><span
+            id="current-meeting"></span></p>
+      </div>
+      <div class="info">
+        <h3 class="info-header">NEXT MEETING:</h3>
+        <p class="meeting"><strong class="meeting-time" id="next-meeting-time"></strong><span id="next-meeting"></span>
+        </p>
+      </div>
+    </div>
+  </main>
+  <div class="fullscreen booking hidden" id="booking-modal">
+    <div class="booking-section">
+      <button class="close" id="close-button">&times;</button>
+      <div class="book-message">Book the room</div>
+      <div class="duration">
+        <button class="time-picker" id="decrement">&#8249;</button>
+        <p id="time">5</p>
+        <button class="time-picker" id="increment">&#8250;</button>
+      </div>
+      <div class="minutes-message">MINUTES</div>
+    </div>
+    <div class="info-section">
+      <button class="book-button confirm" id="confirm-button">CONFIRM</button>
+    </div>
+  </div>
+  <div class="fullscreen forefront hidden" id="booked-modal">
+    <div class="booking-section">
+      <button class="close invisible" id="close-button">&times;</button>
+      <div class="book-message">Room Booked!</div>
+      <div class="confirm-wrapper">
+        <div class="confirm-icon">&#10003;</div>
+      </div>
+    </div>
+  </div>
+  <div class="fullscreen availability hidden" id="availability-modal">Availability Modal</div>
+  <div class="fullscreen admin" id="admin-modal">
+    <button class="primary-branding authorize-button" id="authorize-button">Sign In</button>
+    <button class="primary-branding authorize-button hidden" id="signout-button">Sign Out</button>
+    <label class="primary-branding room-select-title" id="room-select-title">Select conference room</label>
+    <select class="primary-branding room-select-menu" id="room-select">
+      <option value="">Please choose an option</option>
+      <option value="1">1. King's Landing</option>
+      <option value="2">2. The Magic Box</option>
+      <option value="3">3. Taco Town</option>
+      <option value="4">4. Los Pollos Hermanos</option>
+      <option value="5">5. 221B Baker Street</option>
+      <option value="6">6. The Krusty Krab</option>
+      <option value="7">7. New New York</option>
+      <option value="8">8. Serenity</option>
+      <option value="9">9. Freddy's BBQ Joint</option>
+      <option value="10">10. The Peach Pit</option>
+      <option value="11">11. Paddy's Pub</option>
+      <option value="12">12. The Upside Down</option>
+      <option value="13">13. TARDIS</option>
+      <option value="14">14. Bluth's Original Frozen Banana Stand</option>
+      <option value="15">15. The Batcave</option>
+      <option value="16">16. Cone of Silence</option>
+      <option value="17">17. Hooli</option>
+      <option value="18">18. Wellness</option>
+    </select>
+  </div>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
