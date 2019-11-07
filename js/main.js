@@ -128,8 +128,7 @@ function clientLibrary() {
       apiKey: initInfo.apiKey,
       clientId: initInfo.clientId,
       discoveryDocs: initInfo.discoveryDocs,
-      scope: initInfo.scopes,
-      immediate: false
+      scope: initInfo.scopes
     })
     .then(function () {
       // listen for sign in state changes
