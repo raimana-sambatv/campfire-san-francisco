@@ -128,7 +128,8 @@ function clientLibrary() {
       apiKey: initInfo.apiKey,
       clientId: initInfo.clientId,
       discoveryDocs: initInfo.discoveryDocs,
-      scope: initInfo.scopes
+      scope: initInfo.scopes,
+      immediate: false
     })
     .then(function () {
       // listen for sign in state changes
@@ -239,6 +240,7 @@ function bookRoom() {
   request.execute(function (event) {
     console.log('Event created: ' + event.htmlLink);
   });
+  bookTime.innerText = '5'
 }
 
 /**
@@ -461,10 +463,11 @@ function idleLogout() {
   window.addEventListener('scroll', resetTimer, true);
   function yourFunction() {
     bookingModal.classList.add('hidden');
+    bookTime.innerText = '5'
   }
   function resetTimer() {
     clearTimeout(t);
-    t = setTimeout(yourFunction, 60000);
+    t = setTimeout(yourFunction, 30000);
   }
 }
 idleLogout();
