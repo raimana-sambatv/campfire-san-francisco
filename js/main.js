@@ -1,5 +1,4 @@
 // TODO: For meetings starting in less than 5 minutes, prevent booking a room
-//
 
 /**------------------------------------------------------------------------------------------------
  * Constants
@@ -7,8 +6,6 @@
 
 // used when initializing with gapi.client.init()
 const initInfo = {
-  // updated clientId from raimanadh to raimana-sambatv
-  // updated apiKey from raimanadh to raimana-sambatv and added security restrictions
   clientId:
     '753749535184-k5uotv925ajnqo3tg92fke9a1fb38bla.apps.googleusercontent.com',
   apiKey: 'AIzaSyAT7cQ9O8p2IV6qFB-8RyihgddIvK6ZEwo',
@@ -22,93 +19,143 @@ const initInfo = {
 const conferenceRooms = [
   {
     roomNumber: '1',
-    displayName: "King's Landing",
-    calendarId: 'samba.tv_2d3236383639333636323530@resource.calendar.google.com'
+    displayName: "Schitt's Creek",
+    calendarId: 'samba.tv_188196ud20s9uh5nl2mksmmnsjot0@resource.calendar.google.com'
   },
   {
     roomNumber: '2',
-    displayName: 'The Magic Box',
-    calendarId: 'samba.tv_3435363335313735333933@resource.calendar.google.com'
+    displayName: 'The Good Place',
+    calendarId: 'samba.tv_1886fuqhefpnmi4pkoctfdi3p5a82@resource.calendar.google.com'
   },
   {
     roomNumber: '3',
-    displayName: 'Taco Town',
-    calendarId: 'samba.tv_353937363937353533@resource.calendar.google.com'
+    displayName: 'The 99th Precinct',
+    calendarId: 'samba.tv_188agd0pupqamgn2lq6ejcdhmhvue@resource.calendar.google.com'
   },
   {
     roomNumber: '4',
-    displayName: 'Los Pollos Hermanos',
-    calendarId: 'samba.tv_3539323638343534313431@resource.calendar.google.com'
+    displayName: "JJ's Diner",
+    calendarId: 'samba.tv_18818e30gggc6jhnihllp3sk1oi5k@resource.calendar.google.com'
   },
   {
     roomNumber: '5',
-    displayName: '221B Baker Street',
-    calendarId: 'samba.tv_3130373433363338333432@resource.calendar.google.com'
+    displayName: 'Dunder Mifflin',
+    calendarId: 'samba.tv_188abcq5872heiodh07kuoe734a5a@resource.calendar.google.com'
   },
   {
     roomNumber: '6',
-    displayName: 'The Krusty Krab',
-    calendarId: 'samba.tv_3238313931383732383334@resource.calendar.google.com'
+    displayName: "Aziraphale's Bookshop",
+    calendarId: 'samba.tv_188222bciecushevk33oq2rt6vsai@resource.calendar.google.com'
   },
   {
     roomNumber: '7',
-    displayName: 'New New York',
-    calendarId: 'samba.tv_3436373930323037333730@resource.calendar.google.com'
+    displayName: 'Plinko',
+    calendarId: 'samba.tv_1881abf6n0ivqhfhnalkjdgkcqa3e@resource.calendar.google.com'
   },
   {
     roomNumber: '8',
-    displayName: 'Serenity',
-    calendarId: 'samba.tv_36333235343735373035@resource.calendar.google.com'
+    displayName: 'The Magic Box',
+    calendarId: 'samba.tv_18824027od0q0j7mkb7mjnpcoah7e@resource.calendar.google.com'
   },
   {
     roomNumber: '9',
-    displayName: "Freddy's BBQ Joint",
-    calendarId: 'samba.tv_2d33303139353837383736@resource.calendar.google.com'
+    displayName: "Bates Motel",
+    calendarId: 'samba.tv_1887jtf3nhepsjaoi1q7osdjchukm@resource.calendar.google.com'
   },
   {
     roomNumber: '10',
-    displayName: 'The Peach Pit',
-    calendarId: 'samba.tv_2d3430393433383638363238@resource.calendar.google.com'
+    displayName: 'Anavrin',
+    calendarId: 'samba.tv_1881808u0bsroj43ise76kt2slm1m@resource.calendar.google.com'
   },
   {
     roomNumber: '11',
-    displayName: "Paddy's Pub",
-    calendarId: 'samba.tv_3930373230363534373831@resource.calendar.google.com'
+    displayName: "King’s Landing",
+    calendarId: 'samba.tv_188btrmjlo4quh0gkgee52f08j384@resource.calendar.google.com'
   },
   {
     roomNumber: '12',
-    displayName: 'The Upside Down',
-    calendarId: 'samba.tv_2d33393739363537303938@resource.calendar.google.com'
+    displayName: 'Vought International',
+    calendarId: 'samba.tv_188ffijmnitb0hr2jc32644ulaupe@resource.calendar.google.com'
   },
   {
     roomNumber: '13',
-    displayName: 'TARDIS',
-    calendarId: 'samba.tv_2d3630363531353332313638@resource.calendar.google.com'
+    displayName: 'Chateau Picard',
+    calendarId: 'samba.tv_1884rqsdue7doi9uihe2kou34ko3i@resource.calendar.google.com'
   },
   {
     roomNumber: '14',
-    displayName: "Bluth's Original Frozen Banana Stand",
-    calendarId: 'samba.tv_2d36383639333738333836@resource.calendar.google.com'
+    displayName: "Mandalore",
+    calendarId: 'samba.tv_1886lc905c836i5shgnhlc23f0phm@resource.calendar.google.com'
   },
   {
     roomNumber: '15',
-    displayName: 'The Batcave',
-    calendarId: 'samba.tv_2d3938373538383936323037@resource.calendar.google.com'
+    displayName: 'Caprica',
+    calendarId: 'samba.tv_1888stcflh8g0h12l4d23pvnjetqm@resource.calendar.google.com'
   },
   {
     roomNumber: '16',
-    displayName: 'Cone of Silence',
-    calendarId: 'samba.tv_2d3439373735393530383337@resource.calendar.google.com'
+    displayName: 'San Junipero',
+    calendarId: 'samba.tv_1887skseuefaii8ti0r7bi0isckmm@resource.calendar.google.com'
   },
   {
     roomNumber: '17',
-    displayName: 'Hooli',
-    calendarId: 'samba.tv_2d35373532303938343236@resource.calendar.google.com'
+    displayName: 'The Summer Palace',
+    calendarId: 'samba.tv_188cusogfhcpkiiei22ul34luc38i@resource.calendar.google.com'
   },
   {
     roomNumber: '18',
-    displayName: 'Wellness',
-    calendarId: 'samba.tv_35393138363632313934@resource.calendar.google.com'
+    displayName: 'Kobra Kai',
+    calendarId: 'samba.tv_18822bs70i2lqiqmjvtss1tsod70u@resource.calendar.google.com'
+  },
+  {
+    roomNumber: '19',
+    displayName: 'The Regal Beagle',
+    calendarId: 'samba.tv_188ebnelee63ijstjq7l4699uj7g2@resource.calendar.google.com'
+  },
+  {
+    roomNumber: '20',
+    displayName: "Mocha’s Joe",
+    calendarId: 'samba.tv_1886j95otuieaje3hktt3i9jju2pe@resource.calendar.google.com'
+  },
+  {
+    roomNumber: '21',
+    displayName: "Monk’s Cafe",
+    calendarId: 'samba.tv_188ckgcofe4s8g0pnvmi9aftqvua2@resource.calendar.google.com'
+  },
+  {
+    roomNumber: '22',
+    displayName: 'Hollywoo',
+    calendarId: 'samba.tv_188153ig9ucbaigdjb6p7ib6fdqjq@resource.calendar.google.com'
+  },
+  {
+    roomNumber: '23',
+    displayName: "The Citadel of Rick’s",
+    calendarId: 'samba.tv_188cmu84hb816j1aijj24tdj5s472@resource.calendar.google.com'
+  },
+  {
+    roomNumber: '24',
+    displayName: 'Gotham',
+    calendarId: 'samba.tv_18875qsba743ognumsnujrrt01k32@resource.calendar.google.com'
+  },
+  {
+    roomNumber: '25',
+    displayName: 'Smallville',
+    calendarId: 'samba.tv_1884io9otjl8kijki4uu055b44e8s@resource.calendar.google.com'
+  },
+  {
+    roomNumber: '26',
+    displayName: 'The Krusty Krab',
+    calendarId: 'samba.tv_1885flss03tl4jrfkfs2vcuedg5mq@resource.calendar.google.com'
+  },
+  {
+    roomNumber: '27',
+    displayName: "Bob's Burgers",
+    calendarId: 'samba.tv_188b8joflid0ui99ls01ko9o4bmtm@resource.calendar.google.com'
+  },
+  {
+    roomNumber: '28',
+    displayName: 'TARDIS',
+    calendarId: 'samba.tv_1889k1qt497kmg15l8j5cgo0qto9q@resource.calendar.google.com'
   }
 ];
 
